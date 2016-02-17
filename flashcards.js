@@ -2,24 +2,25 @@ Flashcards = {
   
   answerButtonClasses: "p, b",
   openallButtonClasses: "p, .openall",
-  baseClass: ".flashards",
+  baseClass: ".flashcards",
 
   setupAnswerButtonListeners: function() {
       var $base = $(this.baseClass)
       var $answerButton = $("<button class='answer-button'>answer</button>")
+      // debugger
       var $togglers = $base.find(this.answerButtonClasses).hide().before($answerButton)
       $(".answer-button").before($("<br>")).after($("<br>"))
       $base.find(".answer-button").on("click", this.togglerClicked)  
   },
 
   togglerClicked: function(e){
-      var $toggler = $(e.currentTarget).siblings(answerButtonClasses).eq(0)
+      var $toggler = $(e.currentTarget).siblings(Flashcards.answerButtonClasses).eq(0)
       if ($toggler.hasClass("visible")) {
+          // debugger
           $toggler.hide().removeClass("visible")
-          debugger
       } else {
+          // debugger
           $toggler.show().addClass("visible")
-          debugger
       }
       e.preventDefault()
       return false
@@ -27,11 +28,13 @@ Flashcards = {
 
   openallClicked: function(e){
       $(e.preventDefault())
-      var $toggler = $(e.currentTarget).parent().children(answerButtonClasses)
+      var $toggler = $(e.currentTarget).parent().children(Flashcards.answerButtonClasses)
       if ($toggler.hasClass("visible")) {
+          // debugger
           $toggler.hide()
           $toggler.removeClass("visible")
       } else {
+          // debugger
           $toggler.addClass("visible")
           $toggler.show()
       }
