@@ -1,3 +1,13 @@
+#### Setup
+
+Depends on jQuery and the `flashcards.js` script.
+
+Require these in HTML page and then initialize with:
+
+```html
+    $(function(){Flashcards.begin()})
+```
+
 #### HTML elements used by flashcards.js:
 i (section header, preceeds section content)
 
