@@ -8,6 +8,12 @@ Require these in HTML page and then initialize with:
     $(function(){Flashcards.begin()})
 ```
 
+#### Example
+
+Clone the repo and open `flashcards.html` to see an example.
+
+Note that this includes some styles.
+
 #### HTML elements used by flashcards.js:
 i (section header, preceeds section content)
 

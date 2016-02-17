@@ -14,7 +14,8 @@ Flashcards = {
   },
 
   togglerClicked: function(e){
-      var $toggler = $(e.currentTarget).siblings(Flashcards.answerButtonClasses).eq(0)
+      // debugger
+      var $toggler = $(e.currentTarget).nextAll(Flashcards.answerButtonClasses).first()
       if ($toggler.hasClass("visible")) {
           // debugger
           $toggler.hide().removeClass("visible")
